@@ -67,9 +67,6 @@ def observe_teardown_events(
 
 class ReconcilerCharm(ops.CharmBase, metaclass=abc.ABCMeta):
     """Generic reconciler Charm ABC."""
-
-    _maintenance_event_filter: _IssubclassEventFilter = DEFAULT_MAINTENANCE_EVENTS
-
     def __init__(self, framework: ops.Framework):
         super().__init__(framework=framework)
         self._register_observers()

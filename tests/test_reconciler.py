@@ -8,7 +8,6 @@ from tests.assertions import (
     assert_maintenance_events_observed,
     assert_setup_events_observed,
     assert_teardown_events_observed,
-    assert_setup_events_not_observed,
     assert_collect_status_events_not_observed,
     assert_framework_events_not_observed,
 )
