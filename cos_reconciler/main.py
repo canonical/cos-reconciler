@@ -67,6 +67,7 @@ def observe_teardown_events(
 
 class ReconcilerCharm(ops.CharmBase, metaclass=abc.ABCMeta):
     """Generic reconciler Charm ABC."""
+
     def __init__(self, framework: ops.Framework):
         super().__init__(framework=framework)
         self._register_observers()
