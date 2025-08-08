@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cos-reconciler"
+dynamic = ["version"]
+
+description = "Shared reconciler utilities for COS charms."
+readme = "README.md"
+requires-python = "~=3.12.0"
+dependencies = [
+    "ops[testing]>=3.1.0",
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "Apache-2.0"
+
+[tool.setuptools.dynamic]
+version = {attr = "cos_reconciler.version.__version__"}
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.1",
+]
+
+[project.urls]
+Homepage = "https://github.com/canonical/cos-reconciler"
+Issues = "https://github.com/canonical/cos-reconciler/issues"
+
+[project.entry-points.pytest11]
+cos-reconciler = "cos_reconciler.main"
+
